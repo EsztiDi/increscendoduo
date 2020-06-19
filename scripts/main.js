@@ -40,33 +40,31 @@ $(document).ready(function() {
     setTimeout(slideShow, 7000);
   }
 
-  let us = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".us",
-      start: "top 85%",
-      end: "50% bottom",
-    },
-  });
-  us.from(".us", { opacity: 0, x: innerWidth * -0.1 });
+  gsap.registerPlugin(ScrollTrigger);
 
-  let next = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".next",
-      start: "top 85%",
-      end: "50% bottom",
-    },
+  ScrollTrigger.defaults({
+    start: "top 90%",
+    // end: "50% bottom",
   });
-  next.from(".next", { opacity: 0, x: innerWidth * 0.1 });
-
-  let other = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".other",
-      start: "top 85%",
-      end: "50% bottom",
-    },
+  gsap.defaults({
+    duration: 0.7,
+    opacity: 0
   });
-  other.from(".other", { opacity: 0, y: innerHeight * 0.1 });
 
-    
+  gsap.from(".us", { x: innerWidth * -0.1, scrollTrigger: ".us" });
+  gsap.from(".next", { x: innerWidth * 0.1, scrollTrigger: ".next" });
+  gsap.from(".other", { y: innerWidth * 0.1, scrollTrigger: {trigger: ".other", start: "top bottom" }});
+  
+  gsap.from(".flora .img-container", { x: innerWidth * -0.1, scrollTrigger: ".flora" });
+  gsap.from(".flora h3", { x: innerWidth * 0.1, scrollTrigger: ".flora" });
+  $(".flora p").each(function() {
+    gsap.from(this, { x: innerWidth * 0.1, scrollTrigger: this });
+  });
+
+  gsap.from(".daniel .img-container", { x: innerWidth * 0.1, scrollTrigger: ".daniel" });
+  gsap.from(".daniel h3", { x: innerWidth * -0.1, scrollTrigger: ".daniel" });
+  $(".daniel p").each(function() {
+    gsap.from(this, { x: innerWidth * -0.1, scrollTrigger: this });
+  });
 
 })
