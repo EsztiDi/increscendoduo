@@ -129,13 +129,13 @@ $(document).ready(function() {
     gsap.from(this, { x: innerWidth * -0.1, duration: 0.7, opacity: 0, scrollTrigger: this });
   });
 
-  // gsap.set(".card", { y: innerWidth * 0.1, opacity: 0 });
+  gsap.set(".card", { y: innerWidth * 0.1, opacity: 0 });
   ScrollTrigger.batch(".card", {
     onEnter: (elements, triggers) => {
-      // gsap.to(elements, { y: 0, opacity: 1, duration: 0.7, stagger: 0.2 });
-      gsap.from(elements, { y: innerWidth * 0.1, opacity: 0, duration: 0.7, stagger: 0.2 });
+      gsap.to(elements, { y: 0, opacity: 1, duration: 0.7, stagger: 0.2 });
+      // gsap.from(elements, { y: innerWidth * 0.1, opacity: 0, duration: 0.7, stagger: 0.2 });
     },
-    // start: "-10% bottom",
+    start: "-50% bottom",
     once: true
   });
 
