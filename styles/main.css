@@ -4,7 +4,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Kalam&family=Yellowtail&display=swap');
 
 :root {
-  --header-bg: #F7F3DF;
+  /* --header-bg: #F7F3DF; */
+  --header-bg: #001B52;
+  --header-color: #D6E4FF;
+  --header-hover-color: #FFF;
   --hover-color: #8A9093;
   --border-color: #BEC1C4;
   --transition-time: 0.25s ease-in;
@@ -18,15 +21,16 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0.7rem;
-}
-::-webkit-scrollbar-track {
+} */
+::-webkit-scrollbar, ::-webkit-scrollbar-track {
   background: var(--header-bg);
-  border-radius: 25px;
+  background: #EAEBEC;
+  /* border-radius: 25px; */
 }
 ::-webkit-scrollbar-corner {
-  background: var(--header-bg);
+  background: #EAEBEC;
 }
 ::-webkit-scrollbar-thumb {
   background: var(--border-color);
@@ -55,10 +59,15 @@ body > header {
   width: 100%;
   /* height: 13vw; */
   /* padding-top: 13%; */
-  padding-top: 9%;
+  /* padding-top: 9%; */
+  padding-top: 8.5%;
   background: var(--header-bg);
-  background: linear-gradient(to bottom, var(--header-bg) 89%, transparent 100%);
+  /* background: linear-gradient(to bottom, var(--header-bg) 89%, transparent 100%); */
+  /* background: linear-gradient(to bottom, var(--header-bg) 85%, transparent 100%); */
   transition: top 1s ease;
+}
+body > header * {
+  color: var(--header-color);
 }
 
 .logo {
@@ -91,7 +100,7 @@ body > header {
 nav {
   position: absolute;
   /* top: 50%; */
-  top: 50%;
+  top: 52%;
   width: 100%;
 }
 nav ul {
@@ -101,11 +110,11 @@ nav ul {
 }
 nav li {
   /* margin: 0 1.1%; */
-  margin: 0 1.2%;
+  margin: 0 1.1%;
   transition: transform var(--transition-time);
 }
 nav a {
-  font-size: 1.9vw;
+  font-size: 1.8vw;
   /* letter-spacing: 0.1vw; */
   /* font-family: 'Kaushan Script', cursive; */
   /* font-family: 'Handlee', cursive; */
@@ -119,8 +128,8 @@ nav a {
 nav li:hover {
   transform: translateY(-10%);
 }
-nav li:hover a, .social i:hover {
-  color: var(--hover-color);
+nav li:hover a {
+  color: var(--header-hover-color);
 }
 .social i.fa-instagram:hover {
   color: #d73e90;
@@ -144,24 +153,27 @@ nav li:hover a, .social i:hover {
   font-size: 2.2vw;
 }
 .active {
-  border-bottom: 1px solid var(--border-color);
+  /* border-bottom: 1px solid var(--border-color); */
+  border-bottom: 1px solid var(--header-color);
 }
 
 main {
   /* margin-top: 11.5%; */
-  margin-top: 10%;
+  margin-top: 11%;
 }
 
 .slideshow {
   position: relative;
   overflow: hidden;
-  width: 60%;
-  /* padding-top: 66.64%; */
+  /* width: 60%; */
+  width: 100%;
+  padding-top: 66.64%;
   /* padding-top: 39.98%; */
-  padding-top: 39%;
-  margin: auto;
+  /* padding-top: 39%; */
+  /* margin: auto; */
+  /* border: 1.5% solid var(--border-color); */
 }
-.slideshow::before {
+/* .slideshow::before {
   content: "";
   position: absolute;
   top: 0;
@@ -178,15 +190,20 @@ main {
   height: 3%;
   background: linear-gradient(to top, white, transparent);
   z-index: 9;
-}
+} */
 .container {
-  position: absolute;
-  top: 0;
+  position: relative;
+  /* top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; */
+  width: 60%;
+  margin: auto;
+  padding: 1.3%;
+  display: none;
+  background: linear-gradient(135deg, rgba(0, 20, 61, 0.9), transparent);
 }
-.container::before {
+/* .container::before {
   content: "";
   position: absolute;
   left: 0;
@@ -194,8 +211,8 @@ main {
   height: 100%;
   background: linear-gradient(to right, white, transparent);
   z-index: 9;
-}
-.container::after {
+} */
+/* .container::after {
   content: "";
   position: absolute;
   right: 0;
@@ -203,11 +220,11 @@ main {
   height: 100%;
   background: linear-gradient(to left, white, transparent);
   z-index: 9;
-}
+} */
 .slides {
   display: none;
   position: absolute;
-  top: -1%;
+  top: 0;
   left: 0;
   width: 100%;
   /* transition: width 2.5s ease, left 2.5s ease, z-index 0.1s 1s; z-index only for 2 images */
@@ -259,12 +276,14 @@ h3 i {
   right: -4.5%;
   width: 95%;
   height: 96.67%;
-  background: linear-gradient(255deg, rgba(0, 35, 102, 0.6), transparent);
+  /* background: linear-gradient(255deg, rgba(0, 35, 102, 0.6), transparent); */
+  /* background: linear-gradient(255deg, rgba(0, 29, 82, 0.5), transparent); */
+  background: linear-gradient(255deg, rgba(0, 20, 61, 0.5), transparent);
 }
 
 .bio > * {
   margin: 0 15%;
-  padding-top: 4%;
+  padding: 2% 0;
 }
 .bio h3 {
   letter-spacing: 0.1rem;
@@ -299,7 +318,8 @@ h3 i {
   left: -4.5%;
   width: 95%;
   height: 96.67%;
-  background: linear-gradient(135deg, rgba(0, 35, 102, 0.6), transparent);
+  /* background: linear-gradient(135deg, rgba(0, 35, 102, 0.6), transparent); */
+  background: linear-gradient(135deg, rgba(0, 20, 61, 0.5), transparent);
 }
 .daniel .img-container {
   float: right;
@@ -330,7 +350,7 @@ h3 i {
   grid-auto-rows: 213.25px;
   width: 75%;
   margin: auto;
-  padding-top: 4%;
+  padding-top: 2%;
 }
 .photos .card {
   overflow: hidden;
@@ -344,7 +364,8 @@ h3 i {
 }
 
 .modal-open {
-  padding-right: 0.7rem;
+  /* padding-right: 15px; */
+  width: calc(100% - 15px);
 }
 .photos-modal {
   display: none;
@@ -402,8 +423,10 @@ h3 i {
   padding: 1%;
 }
 .prev-slide, .next-slide {
-  padding: 1.5%;
-  border-radius: 15px;
+  /* padding: 1.5%; */
+  padding: 1% 1.46%;
+  /* border-radius: 15px; */
+  border-radius: 50%;
   transition: background-color var(--transition-time);
 }
 .prev-slide:hover, .next-slide:hover {
@@ -413,7 +436,7 @@ h3 i {
 .music {
   width: 70%;
   margin: auto;
-  padding-top: 4%;
+  padding-top: 2%;
 }
 .videos {
   position: relative;
@@ -435,8 +458,9 @@ h3 i {
   justify-content: center;
   text-align: center;
 }
-.contacts > div {
+.contacts > * {
   flex-basis: 40%;
+  padding-bottom: 5%;
 }
 .contacts > h4 {
   flex-basis: 100%;
@@ -456,6 +480,9 @@ footer {
   .slideshow {
     width: 100%;
     padding-top: 66.64%;
+  }
+  .container {
+    width: 100%;
   }
   section {
     font-size: 1rem;

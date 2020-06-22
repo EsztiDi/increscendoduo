@@ -13,6 +13,7 @@ $(document).ready(function() {
   })
 
   var slideIndex = 0;
+  $(".container").fadeIn(1000);
   slideShow();
   function slideShow() {
     var slides = $(".slides");
@@ -44,28 +45,36 @@ $(document).ready(function() {
     $(this).on("click", function () {
       $(".photos-modal").fadeIn();
       currentSlide(index + 1);
-      $("body").addClass("modal-open").css("overflow-y", "hidden");
-      $("nav, .social").addClass("modal-open");
+      if (window.matchMedia("(pointer: fine)").matches) {
+        $("body").addClass("modal-open").css("overflow-y", "hidden");
+        $("body > header").addClass("modal-open");
+      }
     })
   });
 
   $(".close").on("click", function() {
     $(".photos-modal").fadeOut();
-    $("body").removeClass("modal-open").css("overflow-y", "");
-    $("nav, .social").removeClass("modal-open");
+    if (window.matchMedia("(pointer: fine)").matches) {
+      $("body").removeClass("modal-open").css("overflow-y", "");
+      $("body > header").removeClass("modal-open");
+    }
   })
   $(window).click(function(event) {
     if ($(event.target).hasClass("modal-content")) {
       $(".photos-modal").fadeOut();
-      $("body").removeClass("modal-open").css("overflow-y", "");
-      $("nav, .social").removeClass("modal-open");
+      if (window.matchMedia("(pointer: fine)").matches) {
+        $("body").removeClass("modal-open").css("overflow-y", "");
+        $("body > header").removeClass("modal-open");
+      }
     }
   });
   $(document).keydown(function(event) {
     if (event.keyCode == 27) {
       $(".photos-modal").fadeOut();
-      $("body").removeClass("modal-open").css("overflow-y", "");
-      $("nav, .social").removeClass("modal-open");
+      if (window.matchMedia("(pointer: fine)").matches) {
+        $("body").removeClass("modal-open").css("overflow-y", "");
+        $("body > header").removeClass("modal-open");
+      }
     }
     if (event.keyCode == 37) {
       plusSlides(-1);
@@ -123,7 +132,7 @@ $(document).ready(function() {
 
   gsap.from(".us", { x: innerWidth * -0.1, opacity: 0, duration: 0.7, scrollTrigger: ".us" });
   gsap.from(".next", { x: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".next" });
-  gsap.from(".contact", { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: {trigger: ".contact", start: "-30% bottom"}});
+  gsap.from(".contact", { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: {trigger: ".contact", start: "-50% bottom"}});
   
   gsap.from(".email", { x: innerWidth * -0.1, opacity: 0, duration: 0.7, scrollTrigger: ".email" });
   gsap.from(".phone", { x: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".phone" });
