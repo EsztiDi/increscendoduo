@@ -129,7 +129,7 @@ $(document).ready(function() {
   gsap.registerPlugin(ScrollTrigger);
 
   ScrollTrigger.defaults({
-    start: "10% bottom",
+    start: "-10% bottom",
     // start: "top 90%",
     // end: "50% bottom",
   });
@@ -138,34 +138,34 @@ $(document).ready(function() {
   //   opacity: 0,
   // });
 
-  gsap.from(".us", { x: innerWidth * -0.1, opacity: 0, duration: 0.7, scrollTrigger: ".us" });
-  gsap.from(".next", { x: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".next" });
+  gsap.from(".us", { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".us" });
+  gsap.from(".next", { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".next" });
   gsap.from(".contact", { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: {trigger: ".contact", start: "-50% bottom"}});
   
-  gsap.from(".email", { x: innerWidth * -0.1, opacity: 0, duration: 0.7, scrollTrigger: ".email" });
-  gsap.from(".phone", { x: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".phone" });
-  gsap.from(".instagram", { x: innerWidth * -0.1, opacity: 0, duration: 0.7, scrollTrigger: ".instagram" });
-  gsap.from(".facebook", { x: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".facebook" });
+  gsap.from(".email", { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".email" });
+  gsap.from(".phone", { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".phone" });
+  gsap.from(".instagram", { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".instagram" });
+  gsap.from(".facebook", { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".facebook" });
   gsap.from(".contacts h4", { opacity: 0, duration: 0.7, scrollTrigger: ".contacts h4" });
 
   gsap.from(".videos", { opacity: 0, duration: 0.7, scrollTrigger: ".videos" });
 
-  gsap.from(".duo .img-container", { x: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".duo" });
-  gsap.from(".duo h3", { x: innerWidth * -0.1, opacity: 0, duration: 0.7, scrollTrigger: ".duo" });
+  gsap.from(".duo .img-container", { opacity: 0, duration: 0.7, scrollTrigger: ".duo" });
+  gsap.from(".duo h3", { opacity: 0, duration: 0.7, scrollTrigger: ".duo" });
   $(".duo p").each(function() {
-    gsap.from(this, { x: innerWidth * -0.1, opacity: 0, duration: 0.7, scrollTrigger: this });
+    gsap.from(this, { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: this });
   });
 
-  gsap.from(".flora .img-container", { x: innerWidth * -0.1, opacity: 0, duration: 0.7, scrollTrigger: ".flora" });
-  gsap.from(".flora h3", { x: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".flora" });
+  gsap.from(".flora .img-container", { opacity: 0, duration: 0.7, scrollTrigger: ".flora" });
+  gsap.from(".flora h3", { opacity: 0, duration: 0.7, scrollTrigger: ".flora" });
   $(".flora p").each(function() {
-    gsap.from(this, { x: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: this });
+    gsap.from(this, { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: this });
   });
 
-  gsap.from(".daniel .img-container", { x: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".daniel" });
-  gsap.from(".daniel h3", { x: innerWidth * -0.1, opacity: 0, duration: 0.7, scrollTrigger: ".daniel" });
+  gsap.from(".daniel .img-container", { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".daniel" });
+  gsap.from(".daniel h3", { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".daniel" });
   $(".daniel p").each(function() {
-    gsap.from(this, { x: innerWidth * -0.1, opacity: 0, duration: 0.7, scrollTrigger: this });
+    gsap.from(this, { y: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: this });
   });
 
   gsap.set(".card", { y: innerWidth * 0.1, opacity: 0 });
