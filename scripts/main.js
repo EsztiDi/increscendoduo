@@ -1,16 +1,18 @@
 $(document).ready(function() {
   
-  var prevScrollPos = window.pageYOffset;
-  $(window).on("scroll", function(){
-    var currentScrollPos = window.pageYOffset;
+  if (window.matchMedia("(min-width: 641px)").matches) {
+    var prevScrollPos = window.pageYOffset;
+    $(window).on("scroll", function(){
+      var currentScrollPos = window.pageYOffset;
 
-    if (prevScrollPos > currentScrollPos) {
-      $("body > header").css("top", "0");
-    } else {
-      $("body > header").css("top", "-50%");
-    }
-    prevScrollPos = currentScrollPos;
-  })
+      if (prevScrollPos > currentScrollPos) {
+        $("body > header").css("top", "0");
+      } else {
+        $("body > header").css("top", "-13rem");
+      }
+      prevScrollPos = currentScrollPos;
+    })
+  }
 
   var slideIndex = 0;
   $(".container").fadeIn(1000);
@@ -43,7 +45,7 @@ $(document).ready(function() {
 
   $(".card").each(function(index) {
     $(this).on("click", function () {
-      $(".photos-modal").fadeIn();
+      $(".modal").fadeIn();
       currentSlide(index + 1);
       if (window.matchMedia("(pointer: fine)").matches) {
         $("body").addClass("modal-open").css("overflow-y", "hidden");
@@ -53,7 +55,7 @@ $(document).ready(function() {
   });
 
   $(".close").on("click", function() {
-    $(".photos-modal").fadeOut();
+    $(".modal").fadeOut();
     if (window.matchMedia("(pointer: fine)").matches) {
       $("body").removeClass("modal-open").css("overflow-y", "");
       $("body > header").removeClass("modal-open");
@@ -61,7 +63,7 @@ $(document).ready(function() {
   })
   $(window).click(function(event) {
     if ($(event.target).hasClass("modal-content")) {
-      $(".photos-modal").fadeOut();
+      $(".modal").fadeOut();
       if (window.matchMedia("(pointer: fine)").matches) {
         $("body").removeClass("modal-open").css("overflow-y", "");
         $("body > header").removeClass("modal-open");
@@ -70,7 +72,7 @@ $(document).ready(function() {
   });
   $(document).keydown(function(event) {
     if (event.keyCode == 27) {
-      $(".photos-modal").fadeOut();
+      $(".modal").fadeOut();
       if (window.matchMedia("(pointer: fine)").matches) {
         $("body").removeClass("modal-open").css("overflow-y", "");
         $("body > header").removeClass("modal-open");
@@ -118,6 +120,12 @@ $(document).ready(function() {
     slides.eq(modalSlideIndex - 1).fadeIn();
   }
 
+  $("header .fa-bars, header .fa-times").on("click", function () {
+    $("body > header").toggleClass("show1");
+    $("nav ul, .social").toggleClass("show2");
+    $("header .fa-bars, header .fa-times").toggle(500);
+  });
+
   gsap.registerPlugin(ScrollTrigger);
 
   ScrollTrigger.defaults({
@@ -138,7 +146,7 @@ $(document).ready(function() {
   gsap.from(".phone", { x: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".phone" });
   gsap.from(".instagram", { x: innerWidth * -0.1, opacity: 0, duration: 0.7, scrollTrigger: ".instagram" });
   gsap.from(".facebook", { x: innerWidth * 0.1, opacity: 0, duration: 0.7, scrollTrigger: ".facebook" });
-  gsap.from(".contacts h4", { y: innerWidth * -0.1, opacity: 0, duration: 0.7, scrollTrigger: ".contacts h4" });
+  gsap.from(".contacts h4", { opacity: 0, duration: 0.7, scrollTrigger: ".contacts h4" });
 
   gsap.from(".videos", { opacity: 0, duration: 0.7, scrollTrigger: ".videos" });
 
