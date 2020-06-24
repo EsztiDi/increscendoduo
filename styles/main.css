@@ -11,7 +11,7 @@
   --hover-color: #8A9093;
   --border-color: #BEC1C4;
   --transition-time: 0.2s ease-in;
-  --fade-animation: fade-in 0.9s forwards;
+  --fade-animation: fade-in 0.7s forwards;
   --up-animation: up 0.6s forwards;
 }
 * {
@@ -200,6 +200,7 @@ section > * {
   width: 100%;
   padding-top: 31%;
   background: linear-gradient(225deg, #BEC1C4, transparent);
+  opacity: 0;
   animation: var(--fade-animation);
   /* padding-top: 66.64%; */
 }
