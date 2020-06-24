@@ -5,12 +5,13 @@
 
 :root {
   /* --header-bg: #F7F3DF; */
-  --header-bg: #001B52;
-  --header-color: #D6E4FF;
-  --header-hover-color: #FFF;
+  /* --header-bg: #001B52; */
+  /* --header-color: #D6E4FF; */
+  --header-hover-color: #8A9093;
   --hover-color: #8A9093;
   --border-color: #BEC1C4;
   --transition-time: 0.2s ease-in;
+  --fade-animation: fade-in 0.8s forwards;
 }
 * {
   margin: 0;
@@ -21,15 +22,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* ::-webkit-scrollbar {
-  width: 0.7rem;
-} */
-::-webkit-scrollbar, ::-webkit-scrollbar-track {
-  background: var(--header-bg);
-  background: #EAEBEC;
-  /* border-radius: 25px; */
-}
-::-webkit-scrollbar-corner {
+::-webkit-scrollbar, ::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
   background: #EAEBEC;
 }
 ::-webkit-scrollbar-thumb {
@@ -53,36 +46,35 @@ img {
 }
 
 body > header {
+  position: relative;
   z-index: 10;
-  position: fixed;
+  /* position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  /* padding-top: 8.5%; */
-  height: 7rem;
-  background: #001B52;
-  background: var(--header-bg);
+  width: 100%; */
+  height: 8rem;
+  background: #FFF;
+  /* background: var(--header-bg); */
   /* background: linear-gradient(to bottom, var(--header-bg) 85%, transparent 100%); */
-  transition: top 0.7s ease;
+  /* transition: top 0.7s ease; */
+  border-bottom: 1px solid #BEC1C4;
+  border-bottom: 1px solid var(--border-color);
 }
-body > header * {
+/* body > header * {
   color: #D6E4FF;
   color: var(--header-color);
-}
+} */
 header .fa-bars, header .fa-times {
   display: none;
   position: absolute;
   top: 1.1rem;
   right: 6%;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
-
 .logo {
   position: absolute;
   top: 0;
   left: 7.5%;
-  /* width: 8.5%;
-  padding-top: 14%; */
   width: 7.5rem;
   height: 12rem;
 }
@@ -98,13 +90,12 @@ header .fa-bars, header .fa-times {
   bottom: 75%;
   left: 27%;
   white-space: nowrap;
-  /* font-size: 2.2vw; */
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-family: 'Dancing Script', cursive;
 }
 nav {
   position: absolute;
-  top: 47%;
+  top: 50%;
   width: 100%;
 }
 nav ul {
@@ -116,7 +107,6 @@ nav ul {
   width: 68%;
   height: 100%;
   margin: auto;
-  animation: fade-in 0.7s 0.2s forwards alternate;
 }
 nav li {
   margin: 0 1%;
@@ -131,12 +121,6 @@ nav li:last-of-type {
 }
 nav a {
   font-size: 1.5rem;
-  /* letter-spacing: 0.1vw; */
-  /* font-family: 'Kaushan Script', cursive; */
-  /* font-family: 'Handlee', cursive; */
-  /* font-family: 'Lexend Tera', sans-serif; */
-  /* font-family: 'Raleway', sans-serif; */
-  /* font-family: 'Cinzel', serif; */
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
 }
@@ -144,7 +128,7 @@ nav li:hover {
   transform: translateY(-10%);
 }
 nav li:hover a {
-  color: #FFF;
+  color: #8A9093;
   color: var(--header-hover-color);
 }
 .social i.fa-instagram:hover {
@@ -160,25 +144,24 @@ nav li:hover a {
   position: absolute;
   top: 6%;
   right: 1%;
-  min-width: 11%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  animation: fade-in 0.7s 0.2s forwards alternate;
+  min-width: 11%;
 }
 .social a {
   font-size: 1.7rem;
   padding: 0 8%;
 }
 .active {
-  /* border-bottom: 1px solid var(--border-color); */
-  border-bottom: 1px solid #D6E4FF;
-  border-bottom: 1px solid var(--header-color);
+  border-bottom: 1px solid #BEC1C4;
+  border-bottom: 1px solid var(--border-color);
+  /* border-bottom: 1px solid var(--header-color); */
 }
 
 main {
-  /* margin-top: 11.5%; */
-  margin-top: 9.5rem;
+  /* margin-top: 9.5rem; */
+  margin-top: 2.5rem;
 }
 
 section {
@@ -193,69 +176,37 @@ section > * {
 .slideshow {
   position: relative;
   overflow: hidden;
-  padding-top: 66.64%;
-  /* width: 60%; */
-  /* width: 100%; */
-  /* padding-top: 39.98%; */
-  /* padding-top: 39%; */
-  /* margin: auto; */
-  /* border: 1.5% solid var(--border-color); */
+  width: 100%;
+  padding-top: 33%;
+  background: linear-gradient(225deg, #BEC1C4, transparent);
+  animation: var(--fade-animation);
+  /* padding-top: 66.64%; */
 }
-/* .slideshow::before {
+.slideshow::before {
   content: "";
+  z-index: 1;
   position: absolute;
   top: 0;
-  width: 100%;
-  height: 3%;
-  background: linear-gradient(to bottom, white, transparent);
-  z-index: 9;
+  left: 50%;
+  width: 2%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(91, 96, 97, 0.8), transparent);
 }
-.slideshow::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 3%;
-  background: linear-gradient(to top, white, transparent);
-  z-index: 9;
-} */
-.container {
+/* .container {
   display: none;
   width: 60%;
   margin: auto;
   padding: 1.3%;
   background: linear-gradient(135deg, rgba(0, 20, 61, 0.9), var(--header-color));
-  /* position: relative; */
-  /* top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; */
-}
-/* .container::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 1.95%;
-  height: 100%;
-  background: linear-gradient(to right, white, transparent);
-  z-index: 9;
-} */
-/* .container::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  width: 1.95%;
-  height: 100%;
-  background: linear-gradient(to left, white, transparent);
-  z-index: 9;
 } */
 .slides {
-  display: none;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  /* transition: width 2.5s ease, left 2.5s ease, z-index 0.1s 1s; z-index only for 2 images */
+  left: 0%;
+  width: 50%;
+}
+.slides.two {
+  left: 50%;
 }
 
 .cards {
@@ -288,14 +239,9 @@ h3 i {
   color: var(--hover-color);
 }
 
-/* .bio > * { */
-  /* margin: 0 15%; */
-  /* padding: 2% 0; */
-/* } */
 .bio h3 {
   letter-spacing: 0.1rem;
   text-align: center;
-  /* text-indent: 1rem; */
   font-size: 3rem;
   /* font-family: 'Dancing Script', cursive; */
   font-family: 'Yellowtail', cursive;
@@ -308,9 +254,7 @@ h3 i {
 .img-container {
   position: relative;
   width: 40%;
-  /* width: 35%; */
   padding-top: 60%;
-  /* padding-top: 52.52%; */
 }
 .flora .img-container {
   float: left;
@@ -349,12 +293,12 @@ h3 i {
   width: 100%;
 }
 
-.duo .img-container {
+.rep .img-container {
   float: right;
   clear: left;
   margin: 2.5% 0 0.5% 5%;
 }
-.duo .img-container::before {
+.rep .img-container::before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -386,8 +330,9 @@ h3 i {
 }
 
 .modal-open {
-  /* padding-right: 15px; */
-  width: calc(100% - 15px);
+  padding-right: 15px;
+  overflow-y: hidden;
+  /* width: calc(100% - 15px); */
 }
 .modal {
   display: none;
@@ -396,48 +341,33 @@ h3 i {
   left: 0;
   z-index: 11;
   width: 100%;
-  width: 100vw;
   height: 100%;
   background: rgba(190, 193, 196, 0.85);
-  overflow: auto;
 }
 .modal-content {
   position: relative;
   display: flex;
-  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: center;
+  width: 100%;
   height: 100%;
 }
 .modal-slides {
   display: none;
   padding: 1%;
-  max-width: 87%;
+  max-width: 84%;
   max-height: 100%;
 }
-/* .thumbnails {
-  display: flex;
-  align-items: center;
-  flex-basis: 100%;
-  height: 10%;
-  overflow-x: auto;
-}
-.thumbnail {
-  height: 90%;
-  padding: 0 0.5%;
-  margin: auto;
-  cursor: pointer;
-} */
 .modal-content i {
   z-index: 12;
   font-size: 1.5rem;
   color: #fff;
-  /* opacity: 0.9; */
+  opacity: 0.9;
   cursor: pointer;
 }
-/* .modal-content i:hover {
+.modal-content i:hover {
   opacity: 1;
-} */
+}
 .close {
   position: absolute;
   top: 0;
@@ -445,9 +375,7 @@ h3 i {
   padding: 1%;
 }
 .prev-slide, .next-slide {
-  /* padding: 1.5%; */
-  padding: 1% 1.46%;
-  /* border-radius: 15px; */
+  padding: 0.8rem 1.2rem;
   border-radius: 50%;
   transition: background-color 0.2s ease-in;
   transition: background-color var(--transition-time);
@@ -456,15 +384,26 @@ h3 i {
   background: rgb(138, 144, 147, 0.8);
 }
 
-/* .music { */
-  /* width: 70%; */
-  /* margin: auto; */
-  /* padding-top: 2%; */
-/* } */
+.music h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
+  font-size: 1.3rem;
+  font-family: 'Varela Round', sans-serif;
+  padding-bottom: 2%;
+}
+.music h3 i {
+  margin: 1% 2%;
+}
 .videos {
   position: relative;
-  width: 100%;
-  padding-top: 56.25%;
+  width: 80%;
+  padding-top: 45%;
+  /* padding-top: 56.25%; */
+  margin: auto;
+  background: linear-gradient(225deg, #BEC1C4, transparent);
 }
 .videos iframe {
   position: absolute;
@@ -487,6 +426,8 @@ h3 i {
 }
 .contacts > h4 {
   flex-basis: 100%;
+  opacity: 0;
+  animation: var(--fade-animation);
 }
 .contacts a:hover {
   color: #8A9093;
@@ -502,14 +443,23 @@ footer {
 
 @media screen and (max-width: 640px) {
   body > header {
-    height: 4rem;
-    transition: 0.7s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3.5rem;
+    transition: 0.5s ease;
   }
   .logo {
-    top: 0.9rem;
+    top: -0.6rem;
     left: 0;
-    width: 5rem;
-    height: 8rem;
+    width: 4rem;
+    height: 6.4rem;
+  }
+  .logo a {
+    bottom: 43%;
+    left: 65%;
+    font-size: 1.9rem;
   }
   nav {
     top: 16%;
@@ -521,6 +471,7 @@ footer {
     flex-wrap: nowrap;
     justify-content: space-between;
     opacity: 0;
+    animation: fade-in 0.5s 0.1s forwards alternate;
   }
   .social {
     display: none;
@@ -530,6 +481,7 @@ footer {
     width: 100%;
     justify-content: space-evenly;
     opacity: 0;
+    animation: fade-in 0.5s 0.1s forwards alternate;
   }
   .show1 {
     height: 85%;
@@ -541,15 +493,28 @@ footer {
     display: block;
   }
   main {
-    margin-top: 6.5rem;
+    margin-top: 5.5rem;
   }
   section {
     font-size: 1rem;
     margin: 0 8%;
   }
-  .container {
+  .slideshow {
+    padding-top: 66.64%;
+  }
+  .slideshow::before {
+    display: none;
+  }
+  .slides {
+    display: none;
     width: 100%;
   }
+  .slides.two {
+    left: 0;
+  }
+  /* .container {
+    width: 100%;
+  } */
   .cards {
     flex-direction: column;
   }
@@ -557,7 +522,8 @@ footer {
     padding: 2.5rem 0 0;
   }
   .bio h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.05rem;
   }
   .modal-slides {
     max-width: 100%;
@@ -573,6 +539,14 @@ footer {
   }
   .prev-slide:hover, .next-slide:hover {
     background: none;
+  }
+  .videos {
+    width: 100%;
+    padding-top: 56.25%;
+  }
+  .music h3 {
+    font-size: 1.1rem;
+    width: 100%;
   }
   .contacts > * {
     padding: 0 0 2.5rem;
