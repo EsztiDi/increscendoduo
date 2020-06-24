@@ -1,18 +1,4 @@
 $(document).ready(function() {
-  
-  // if (window.matchMedia("(min-width: 641px)").matches) {
-  //   var prevScrollPos = window.pageYOffset;
-  //   $(window).on("scroll", function(){
-  //     var currentScrollPos = window.pageYOffset;
-
-  //     if (prevScrollPos > currentScrollPos) {
-  //       $("body > header").css("top", "0");
-  //     } else {
-  //       $("body > header").css("top", "-13rem");
-  //     }
-  //     prevScrollPos = currentScrollPos;
-  //   })
-  // }
 
   if (window.matchMedia("(max-width: 640px)").matches) {
     var slideIndex = 0;
@@ -48,7 +34,7 @@ $(document).ready(function() {
     if (window.matchMedia("(pointer: fine)").matches) {
       setTimeout(function() {
         $("body").removeClass("modal-open");
-      }, 300);
+      }, 350);
       // $("body > header").removeClass("modal-open");
     }
   }
@@ -80,12 +66,6 @@ $(document).ready(function() {
     plusSlides(1);
   });
 
-  // $(".thumbnail").each(function (index) {
-  //   $(this).on("click", function () {
-  //     currentSlide(index + 1);
-  //   });
-  // });
-
   var modalSlideIndex = 1;
   modalSlides(modalSlideIndex);
 
@@ -110,78 +90,82 @@ $(document).ready(function() {
   $("header .fa-bars, header .fa-times").on("click", function () {
     $("body > header").toggleClass("show1");
     setTimeout(function() {
-      $("nav ul, .social").toggleClass("show2");
+      $("nav ul").toggleClass("show2");
     }, 100);
     $("header .fa-bars, header .fa-times").toggle(500);
   });
 
-  gsap.registerPlugin(ScrollTrigger);
-
-  ScrollTrigger.defaults({
-    start: "10% bottom",
+  $(".cards > *, .bio p, .photos .card, .videos, .music p").each(function (index) {
+    $(this).css("animation-delay", index * 0.15 + "s");
   });
 
-  ScrollTrigger.batch(".cards div", {
-    onEnter: (elements, triggers) => {
-      gsap.from(elements, { y: 70, opacity: 0, duration: 0.6, stagger: 0.2 });
-    },
-    once: true,
-  });
+  // gsap.registerPlugin(ScrollTrigger);
 
-  ScrollTrigger.batch(".flora h3, .flora div", {
-    onEnter: (elements, triggers) => {
-      gsap.from(elements, { opacity: 0, duration: 0.8, stagger: 0.2 });
-    },
-    once: true,
-  });
-  ScrollTrigger.batch(".flora p", {
-    onEnter: (elements, triggers) => {
-      gsap.from(elements, { y: 70, opacity: 0, duration: 0.6, stagger: 0.2 });
-    },
-    once: true,
-  });
+  // ScrollTrigger.defaults({
+  //   start: "10% bottom",
+  // });
 
-  ScrollTrigger.batch(".daniel h3, .daniel div", {
-    onEnter: (elements, triggers) => {
-      gsap.from(elements, { opacity: 0, duration: 0.8, stagger: 0.2 });
-    },
-    once: true,
-  });
-  ScrollTrigger.batch(".daniel p", {
-    onEnter: (elements, triggers) => {
-      gsap.from(elements, { y: 70, opacity: 0, duration: 0.6, stagger: 0.2 });
-    },
-    once: true,
-  });
+  // ScrollTrigger.batch(".cards div", {
+  //   onEnter: (elements, triggers) => {
+  //     gsap.from(elements, { y: 70, opacity: 0, duration: 0.6, stagger: 0.2 });
+  //   },
+  //   once: true,
+  // });
 
-  ScrollTrigger.batch(".rep h3, .rep div", {
-    onEnter: (elements, triggers) => {
-      gsap.from(elements, { opacity: 0, duration: 0.8, stagger: 0.2 });
-    },
-    once: true,
-  });
-  ScrollTrigger.batch(".rep p", {
-    onEnter: (elements, triggers) => {
-      gsap.from(elements, { y: 70, opacity: 0, duration: 0.6, stagger: 0.2 });
-    },
-    once: true,
-  });
+  // ScrollTrigger.batch(".flora h3, .flora div", {
+  //   onEnter: (elements, triggers) => {
+  //     gsap.from(elements, { opacity: 0, duration: 0.8, stagger: 0.2 });
+  //   },
+  //   once: true,
+  // });
+  // ScrollTrigger.batch(".flora p", {
+  //   onEnter: (elements, triggers) => {
+  //     gsap.from(elements, { y: 70, opacity: 0, duration: 0.6, stagger: 0.2 });
+  //   },
+  //   once: true,
+  // });
 
-  // gsap.set(".card", { y: 100, opacity: 0 });
-  ScrollTrigger.batch(".card", {
-    onEnter: (elements, triggers) => {
-      // gsap.to(elements, { y: 0, opacity: 1, duration: 0.6, stagger: 0.2 });
-      gsap.from(elements, { y: 70, opacity: 0, duration: 0.6, stagger: 0.2 });
-    },
-    once: true
-  });
+  // ScrollTrigger.batch(".daniel h3, .daniel div", {
+  //   onEnter: (elements, triggers) => {
+  //     gsap.from(elements, { opacity: 0, duration: 0.8, stagger: 0.2 });
+  //   },
+  //   once: true,
+  // });
+  // ScrollTrigger.batch(".daniel p", {
+  //   onEnter: (elements, triggers) => {
+  //     gsap.from(elements, { y: 70, opacity: 0, duration: 0.6, stagger: 0.2 });
+  //   },
+  //   once: true,
+  // });
 
-  ScrollTrigger.batch(".music h3, .music div", {
-    onEnter: (elements, triggers) => {
-      gsap.from(elements, { opacity: 0, duration: 0.8, stagger: 0.2 });
-    },
-    once: true,
-  });
+  // ScrollTrigger.batch(".rep h3, .rep div", {
+  //   onEnter: (elements, triggers) => {
+  //     gsap.from(elements, { opacity: 0, duration: 0.8, stagger: 0.2 });
+  //   },
+  //   once: true,
+  // });
+  // ScrollTrigger.batch(".rep p", {
+  //   onEnter: (elements, triggers) => {
+  //     gsap.from(elements, { y: 70, opacity: 0, duration: 0.6, stagger: 0.2 });
+  //   },
+  //   once: true,
+  // });
+
+  // // gsap.set(".card", { y: 100, opacity: 0 });
+  // ScrollTrigger.batch(".card", {
+  //   onEnter: (elements, triggers) => {
+  //     // gsap.to(elements, { y: 0, opacity: 1, duration: 0.6, stagger: 0.2 });
+  //     gsap.from(elements, { y: 70, opacity: 0, duration: 0.6, stagger: 0.2 });
+  //   },
+  //   once: true
+  // });
+
+  // ScrollTrigger.batch(".music h3, .music div", {
+  //   onEnter: (elements, triggers) => {
+  //     gsap.from(elements, { opacity: 0, duration: 0.8, stagger: 0.2 });
+  //   },
+  //   once: true,
+  // });
 
 
 })

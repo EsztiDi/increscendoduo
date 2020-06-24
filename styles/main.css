@@ -11,7 +11,8 @@
   --hover-color: #8A9093;
   --border-color: #BEC1C4;
   --transition-time: 0.2s ease-in;
-  --fade-animation: fade-in 0.8s forwards;
+  --fade-animation: fade-in 0.9s forwards;
+  --up-animation: up 0.6s forwards;
 }
 * {
   margin: 0;
@@ -52,7 +53,7 @@ body > header {
   top: 0;
   left: 0;
   width: 100%; */
-  height: 8rem;
+  height: 9rem;
   background: #FFF;
   /* background: var(--header-bg); */
   /* background: linear-gradient(to bottom, var(--header-bg) 85%, transparent 100%); */
@@ -72,39 +73,43 @@ header .fa-bars, header .fa-times {
   font-size: 1.6rem;
 }
 .logo {
-  position: absolute;
-  top: 0;
-  left: 7.5%;
-  width: 7.5rem;
-  height: 12rem;
+  position: relative;
+  top: -1rem;
+  /* left: 38.89%; */
+  /* right: -10%; */
+  width: 17.5rem;
+  height: 7.35rem;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../images/logo-v.gif");
 }
-.logo img {
+/* .logo img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */
 .logo a {
   position: absolute;
-  bottom: 75%;
-  left: 27%;
-  white-space: nowrap;
+  bottom: 50%;
+  right: 0;
+  /* left: 35%; */
+  /* white-space: nowrap; */
   font-size: 2rem;
   font-family: 'Dancing Script', cursive;
 }
 nav {
   position: absolute;
-  top: 50%;
+  bottom: 2%;
   width: 100%;
 }
 nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   list-style: none;
-  width: 68%;
   height: 100%;
   margin: auto;
 }
@@ -141,27 +146,43 @@ nav li:hover a {
   color: #0168e2;
 }
 .social {
-  position: absolute;
-  top: 6%;
-  right: 1%;
+  /* position: absolute; */
+  /* top: 6%; */
+  /* right: 1%; */
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  min-width: 11%;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #BEC1C4;
+  border-bottom: 1px solid var(--border-color);
+  /* min-width: 11%; */
 }
 .social a {
   font-size: 1.7rem;
-  padding: 0 8%;
+  padding: 0 4% 1.3rem;
 }
 .active {
-  border-bottom: 1px solid #BEC1C4;
-  border-bottom: 1px solid var(--border-color);
-  /* border-bottom: 1px solid var(--header-color); */
+  /* border-bottom: 1px solid #BEC1C4; */
+  /* border-bottom: 1px solid var(--border-color); */
+  color: #8A9093;
+  color: var(--hover-color);
 }
 
 main {
   /* margin-top: 9.5rem; */
   margin-top: 2.5rem;
+}
+main > h2 {
+  display: none;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: 'Varela Round', sans-serif;
+  text-transform: uppercase;
+  border-bottom: 1px solid #BEC1C4;
+  border-bottom: 1px solid var(--border-color);
+  opacity: 0;
+  animation: var(--fade-animation);
 }
 
 section {
@@ -177,7 +198,7 @@ section > * {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-top: 33%;
+  padding-top: 31%;
   background: linear-gradient(225deg, #BEC1C4, transparent);
   animation: var(--fade-animation);
   /* padding-top: 66.64%; */
@@ -201,8 +222,8 @@ section > * {
 } */
 .slides {
   position: absolute;
-  top: 0;
-  left: 0%;
+  top: -3%;
+  left: 0;
   width: 50%;
 }
 .slides.two {
@@ -211,33 +232,38 @@ section > * {
 
 .cards {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
-  /* margin: 0 11%; */
+  margin: 2.5rem 0 0;
+  padding: 0 5%;
+  border-top: 1px solid #BEC1C4;
+  border-top: 1px solid var(--border-color);
 }
 .cards > * {
-  flex-basis: 48%;
-  padding: 2.5rem 4% 0;
+  flex-basis: 33%;
+  padding: 2.5rem 2% 0;
+  opacity: 0;
+  animation: var(--up-animation);
 }
 .us {
   text-align: justify;
 }
 .cards h3 {
-  display: flex;
-  align-items: center;
+  /* display: flex; */
+  /* align-items: center; */
   /* font-family: 'Kaushan Script', cursive; */
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
-  margin-bottom: 4%;
-  border-bottom: 1px solid #BEC1C4;
-  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+  /* border-bottom: 1px solid #BEC1C4; */
+  /* border-bottom: 1px solid var(--border-color); */
 }
-h3 i {
+/* h3 i {
   font-size: 2rem;
   margin: 1% 4%;
   color: #8A9093;
   color: var(--hover-color);
-}
+} */
 
 .bio h3 {
   letter-spacing: 0.1rem;
@@ -247,14 +273,20 @@ h3 i {
   font-family: 'Yellowtail', cursive;
   font-weight: 500;
   margin-bottom: 1%;
+  opacity: 0;
+  animation: var(--fade-animation);
 }
 .bio p {
   text-align: justify;
+  opacity: 0;
+  animation: var(--up-animation);
 }
 .img-container {
   position: relative;
   width: 40%;
   padding-top: 60%;
+  opacity: 0;
+  animation: var(--fade-animation);
 }
 .flora .img-container {
   float: left;
@@ -321,6 +353,8 @@ h3 i {
 .photos .card {
   overflow: hidden;
   cursor: pointer;
+  opacity: 0;
+  animation: var(--up-animation);
 }
 .card img {
   width: 100%;
@@ -330,7 +364,7 @@ h3 i {
 }
 
 .modal-open {
-  padding-right: 15px;
+  padding-right: 16px;
   overflow-y: hidden;
   /* width: calc(100% - 15px); */
 }
@@ -361,7 +395,7 @@ h3 i {
 .modal-content i {
   z-index: 12;
   font-size: 1.5rem;
-  color: #fff;
+  color: #FFF;
   opacity: 0.9;
   cursor: pointer;
 }
@@ -384,26 +418,20 @@ h3 i {
   background: rgb(138, 144, 147, 0.8);
 }
 
-.music h3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 80%;
-  margin: auto;
-  font-size: 1.3rem;
-  font-family: 'Varela Round', sans-serif;
-  padding-bottom: 2%;
-}
-.music h3 i {
+/* .music h3 i {
   margin: 1% 2%;
-}
+} */
 .videos {
+  /* display: inline-block; */
   position: relative;
-  width: 80%;
-  padding-top: 45%;
+  width: 46%;
+  padding-top: 25.875%;
   /* padding-top: 56.25%; */
   margin: auto;
+  /* margin: 0 2%; */
   background: linear-gradient(225deg, #BEC1C4, transparent);
+  opacity: 0;
+  animation: var(--fade-animation);
 }
 .videos iframe {
   position: absolute;
@@ -412,17 +440,30 @@ h3 i {
   width: 100%;
   height: 100%;
 }
-
-/* .contacts {
+.music p {
+  /* display: flex;
   align-items: center;
-} */
+  justify-content: center; */
+  width: 46%;
+  margin: 1rem auto;
+  /* margin: 1rem 2%; */
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+  opacity: 0;
+  animation: var(--fade-animation);
+}
+
+.contacts {
+  border-top: 0px;
+  padding: 0 15%;
+}
 .contacts * {
   justify-content: center;
   text-align: center;
 }
 .contacts > * {
   flex-basis: 40%;
-  padding: 0 4% 2.5rem;
+  padding: 0 4% 3.5rem;
 }
 .contacts > h4 {
   flex-basis: 100%;
@@ -438,7 +479,7 @@ footer {
   width: 100%;
   font-size: 0.9rem;
   text-align: center;
-  margin: 14rem 0 1rem;
+  margin: 10rem 0 1rem;
 }
 
 @media screen and (max-width: 640px) {
@@ -451,29 +492,35 @@ footer {
     transition: 0.5s ease;
   }
   .logo {
-    top: -0.6rem;
+    top: -0.4rem;
     left: 0;
-    width: 4rem;
-    height: 6.4rem;
+    width: 14.3rem;
+    height: 6rem;
+    margin: 0;
+    background-image: url("../images/logo.gif");
   }
   .logo a {
-    bottom: 43%;
-    left: 65%;
-    font-size: 1.9rem;
+    bottom: 45%;
+    /* left: 65%; */
+    font-size: 1.8rem;
   }
   nav {
-    top: 16%;
-    height: 65%;
+    top: 4.5rem;
+    bottom: 2.5rem;
   }
   nav ul {
     display: none;
     flex-direction: column;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     justify-content: space-between;
     opacity: 0;
     animation: fade-in 0.5s 0.1s forwards alternate;
   }
-  .social {
+  .index {
+    color: #8A9093;
+    color: var(--hover-color);
+  }
+  /* .social {
     display: none;
     top: unset;
     right: unset;
@@ -482,7 +529,7 @@ footer {
     justify-content: space-evenly;
     opacity: 0;
     animation: fade-in 0.5s 0.1s forwards alternate;
-  }
+  } */
   .show1 {
     height: 85%;
   }
@@ -493,11 +540,18 @@ footer {
     display: block;
   }
   main {
+    margin-top: 3.5rem;
+  }
+  main > h2 {
+    display: block;
+  }
+  .home {
     margin-top: 5.5rem;
   }
   section {
     font-size: 1rem;
-    margin: 0 8%;
+    /* margin: 0 8%; */
+    margin: 1rem 8% 0;
   }
   .slideshow {
     padding-top: 66.64%;
@@ -517,13 +571,18 @@ footer {
   } */
   .cards {
     flex-direction: column;
+    margin: 2rem 0 0;
+    padding: 0 8%;
   }
   .cards > * {
     padding: 2.5rem 0 0;
   }
+  .cards h3 {
+    text-align: center;
+  }
   .bio h3 {
-    font-size: 1.8rem;
-    letter-spacing: 0.05rem;
+    font-size: 1.98rem;
+    letter-spacing: 0;
   }
   .modal-slides {
     max-width: 100%;
@@ -543,13 +602,14 @@ footer {
   .videos {
     width: 100%;
     padding-top: 56.25%;
+    margin: 0;
   }
-  .music h3 {
-    font-size: 1.1rem;
+  .music p {
     width: 100%;
+    margin: 1rem 0;
   }
   .contacts > * {
-    padding: 0 0 2.5rem;
+    padding: 0 0 3.5rem;
   }
 }
 
@@ -557,9 +617,6 @@ footer {
   section {
     font-size: 1.1rem;
   }
-  /* .cards {
-    margin: 3% 15% 0;
-  } */
 }
 
 @keyframes fade-in {
@@ -568,5 +625,15 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
