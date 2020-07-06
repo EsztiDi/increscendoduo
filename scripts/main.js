@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  if (window.matchMedia("(max-width: 640px)").matches) {
+  // if (window.matchMedia("(max-width: 640px)").matches) {
     var slideIndex = 0;
     // $(".container").fadeIn(1000);
     slideShow();
@@ -16,7 +16,7 @@ $(document).ready(function() {
       slides.eq(slideIndex - 1).fadeIn(1000);
       setTimeout(slideShow, 7000);
     }
-  }
+  // }
 
   $(".card").each(function(index) {
     $(this).on("click", function () {
@@ -95,9 +95,12 @@ $(document).ready(function() {
     $("header .fa-bars, header .fa-times").toggle(500);
   });
 
-  $(".cards > *, .bio p, .photos .card, .videos, .music p").each(function (index) {
+  $(".cards > *, .bio p, .photos .card").each(function (index) {
     $(this).css("animation-delay", index * 0.15 + "s");
   });
+  $(".daniel h3, .daniel .img-container").each(function () {
+    $(this).css("animation-delay", $(".flora p").length * 0.15 + "s");
+  });;
 
   // gsap.registerPlugin(ScrollTrigger);
 
