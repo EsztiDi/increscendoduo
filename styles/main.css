@@ -152,7 +152,8 @@ section > * {
 .slideshow {
   position: relative;
   overflow: hidden;
-  width: 78%;
+  /* width: 78%; */
+  width: 100%;
   padding-top: 27%;
   margin: auto;
   background: linear-gradient(225deg, #BEC1C4, #FFF);
@@ -165,9 +166,9 @@ section > * {
   display: none;
   position: absolute;
   top: -15%;
-  width: 100%;
-  /* left: 10%; */
-  /* width: 80%; */
+  /* width: 100%; */
+  left: 11%;
+  width: 78%;
 }
 
 .cards {
