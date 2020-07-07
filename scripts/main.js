@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+  var audio = document.getElementById("audio");
+  if (window.matchMedia("(max-width: 640px)").matches) {
+    audio.remove();
+  } else if (document.location.href.includes("index")) {
+    audio.volume = 0.15;
+  }
+
   // if (window.matchMedia("(max-width: 640px)").matches) {
     var slideIndex = 0;
     // $(".container").fadeIn(1000);

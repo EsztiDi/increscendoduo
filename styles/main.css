@@ -119,6 +119,20 @@ nav li:hover a {
   color: #8A9093;
   color: var(--hover-color);
 }
+audio::-webkit-media-controls-panel {
+  background: #FFF;
+}
+audio::-webkit-media-controls-current-time-display, 
+audio::-webkit-media-controls-time-remaining-display {
+  display: none;
+}
+audio {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 220px;
+  outline: 0px;
+}
 
 main {
   margin-top: 2.5rem;
@@ -152,8 +166,8 @@ section > * {
 .slideshow {
   position: relative;
   overflow: hidden;
-  /* width: 78%; */
-  width: 100%;
+  width: 78%;
+  /* width: 100%; */
   padding-top: 27%;
   margin: auto;
   background: linear-gradient(225deg, #BEC1C4, #FFF);
@@ -166,9 +180,9 @@ section > * {
   display: none;
   position: absolute;
   top: -15%;
-  /* width: 100%; */
-  left: 11%;
-  width: 78%;
+  width: 100%;
+  /* left: 11%; */
+  /* width: 78%; */
 }
 
 .cards {
@@ -279,7 +293,7 @@ section > * {
   letter-spacing: 0.1rem;
   font-family: 'Yellowtail', cursive;
   font-weight: 500;
-  margin: 10% 0 1%;
+  margin: 2rem 0 0.5rem;
   /* opacity: 0; */
   /* animation: var(--fade-animation); */
 }
@@ -291,7 +305,7 @@ section > * {
   /* clear: left; */
   align-self: flex-start;
   min-width: 200px;
-  margin: 2.5% 0 0.5% 5%;
+  margin: 1.5rem 0 0.5% 5%;
 }
 .rep .img-container::before {
   content: "";
@@ -568,12 +582,12 @@ footer {
   .us {
     padding-top: 1.5rem;
   }
-  .cards h3 {
+  .cards h3, .rep h3 {
     text-align: center;
     text-indent: 0;
   }
   .bio h3 {
-    font-size: 1.98rem;
+    font-size: 2rem;
     letter-spacing: 0;
   }
   .rep h3:first-of-type {
@@ -587,7 +601,7 @@ footer {
   .rep .img-container {
     width: 90%;
     padding-top: 135%;
-    margin: 15% auto 0;
+    margin: 3rem auto 0;
   }
   .modal-slides {
     max-width: 100%;
