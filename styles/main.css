@@ -126,6 +126,7 @@ audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display {
   display: none;
 }
+
 audio {
   position: absolute;
   top: 0;
@@ -142,7 +143,7 @@ main {
 }
 main > h2 {
   display: none;
-  padding: 0.5rem 0;
+  padding: 0.6rem 0;
   text-align: center;
   font-size: 1.3rem;
   /* font-family: 'Varela Round', sans-serif; */
@@ -166,9 +167,9 @@ section > * {
 .slideshow {
   position: relative;
   overflow: hidden;
-  width: 78%;
-  /* width: 100%; */
-  padding-top: 27%;
+  width: 79%;
+  height: 76vh;
+  /* padding-top: 36%; */
   margin: auto;
   background: linear-gradient(225deg, #BEC1C4, #FFF);
   background: linear-gradient(225deg, var(--border-color), #FFF);
@@ -179,7 +180,7 @@ section > * {
 .slides {
   display: none;
   position: absolute;
-  top: -15%;
+  top: -40px;
   width: 100%;
   /* left: 11%; */
   /* width: 78%; */
@@ -213,7 +214,8 @@ section > * {
   /* font-family: 'Kaushan Script', cursive; */
   font-family: 'Varela Round', sans-serif;
   text-transform: uppercase;
-  text-indent: 0.5rem;
+  text-indent: 1rem;
+  /* text-align: center; */
   margin-bottom: 1rem;
   /* border-bottom: 1px solid #BEC1C4; */
   /* border-bottom: 1px solid var(--border-color); */
@@ -254,7 +256,8 @@ section > * {
   left: -4.5%;
   width: 95%;
   height: 96.67%;
-  background: linear-gradient(135deg, rgba(0, 20, 61, 0.5), transparent);
+  /* background: linear-gradient(135deg, rgba(0, 20, 61, 0.5), transparent); */
+  background: linear-gradient(135deg, rgba(0, 35, 102, 0.6), transparent);
 }
 .daniel .img-container {
   float: right;
@@ -316,7 +319,8 @@ section > * {
   width: 95%;
   height: 96.67%;
   min-height: 290px;
-  background: linear-gradient(255deg, rgba(0, 20, 61, 0.5), transparent);
+  /* background: linear-gradient(255deg, rgba(0, 20, 61, 0.5), transparent); */
+  background: linear-gradient(255deg, rgba(0, 35, 102, 0.6), transparent);
 }
 
 .photos {
@@ -394,23 +398,25 @@ section > * {
 }
 
 .music {
-  /* columns: 2; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   opacity: 0;
   animation: var(--fade-animation);
 }
-/* .music h3 i {
-  margin: 1% 2%;
-} */
+.vid-container {
+  width: 46%;
+  margin: 0 2%;
+}
 .videos {
   position: relative;
-  width: 46%;
-  padding-top: 25.875%;
-  /* padding-top: 56.25%; */
-  margin: auto;
+  width: 100%;
+  /* padding-top: 25.875%; */
+  padding-top: 56.25%;
+  /* margin: auto; */
   /* margin: 0 2%; */
   background: linear-gradient(225deg, #BEC1C4, transparent);
   background: linear-gradient(225deg, var(--border-color), transparent);
-
 }
 .videos iframe {
   position: absolute;
@@ -420,11 +426,8 @@ section > * {
   height: 100%;
 }
 .music p {
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  width: 44%;
-  margin: 1rem auto;
+  /* width: 44%; */
+  margin-top: 1rem;
   /* margin: 1rem 2%; */
   font-family: 'Varela Round', sans-serif;
   text-align: center;
@@ -483,9 +486,6 @@ footer {
   color: #0168e2;
 }
 .social {
-  /* position: absolute; */
-  /* top: 6%; */
-  /* right: 1%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -498,13 +498,25 @@ footer {
   padding: 0 3% 1.3rem;
 }
 
+@media screen and (min-width: 1440px) {
+  section {
+    font-size: 1.1rem;
+  }
+}
+@media (max-aspect-ratio: 8/7) {
+  .slideshow {
+    height: 0;
+    padding-top: 65%;
+  }
+}
 @media screen and (max-width: 1024px) {
   .slideshow {
     width: 100%;
-    padding-top: 40%;
+  }
+  .slides {
+    top: -10px;
   }
 }
-
 @media screen and (max-width: 640px) {
   body > header {
     position: fixed;
@@ -533,7 +545,8 @@ footer {
   nav ul {
     display: none;
     flex-direction: column;
-    justify-content: space-between;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     opacity: 0;
     animation: fade-in 0.5s 0.1s forwards alternate;
   }
@@ -561,14 +574,13 @@ footer {
   }
   section {
     font-size: 1rem;
-    margin: 1rem 5% 0;
+    margin: 1.5rem 5% 0;
   }
   .slideshow {
     padding-top: 66.64%;
   }
   .slides {
     top: 0;
-    /* width: 100%; */
   }
   .cards {
     flex-direction: column;
@@ -579,9 +591,9 @@ footer {
     min-width: auto;
     padding: 2rem 0 0;
   }
-  .us {
+  /* .us {
     padding-top: 1.5rem;
-  }
+  } */
   .cards h3, .rep h3 {
     text-align: center;
     text-indent: 0;
@@ -618,26 +630,19 @@ footer {
   .prev-slide:hover, .next-slide:hover {
     background: none;
   }
-  .videos {
+  .vid-container {
     width: 100%;
-    padding-top: 56.25%;
     margin: 0;
   }
-  .music p {
+  /* .music p {
     width: 100%;
     margin: 1rem 0;
-  }
+  } */
   .contacts > * {
     padding: 0 0 3rem;
   }
   .social {
     justify-content: space-evenly;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  section {
-    font-size: 1.1rem;
   }
 }
 

@@ -1,10 +1,16 @@
 $(document).ready(function() {
 
+  var path = window.location.pathname;
   var audio = document.getElementById("audio");
-  if (window.matchMedia("(max-width: 640px)").matches) {
+  if (window.matchMedia("(max-width: 640px)").matches && audio) {
     audio.remove();
-  } else if (document.location.href.includes("index")) {
+  } else if (path == "/" || path.includes("index")) {
+    audio.pause();
     audio.volume = 0.15;
+    audio.play();
+    $(window).one("click", function() {
+      audio.play();
+    })
   }
 
   // if (window.matchMedia("(max-width: 640px)").matches) {
