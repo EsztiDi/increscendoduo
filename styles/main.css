@@ -132,7 +132,14 @@ audio {
   top: 0;
   right: 0;
   width: 220px;
+  height: 40px;
   outline: 0px;
+  border-radius: 20px;
+  opacity: 0.7;
+  transition: opacity var(--transition-time);
+}
+audio:hover {
+  opacity: 1;
 }
 
 main {
@@ -143,11 +150,12 @@ main {
 }
 main > h2 {
   display: none;
-  padding: 0.6rem 0;
+  padding: 1rem 0;
   text-align: center;
   font-size: 1.3rem;
   /* font-family: 'Varela Round', sans-serif; */
   font-family: 'Cinzel', serif;
+  line-height: 1;
   text-transform: uppercase;
   border-bottom: 1px solid #BEC1C4;
   border-bottom: 1px solid var(--border-color);
@@ -296,7 +304,7 @@ section > * {
   letter-spacing: 0.1rem;
   font-family: 'Yellowtail', cursive;
   font-weight: 500;
-  margin: 2rem 0 0.5rem;
+  margin: 2rem 0 0.8rem;
   /* opacity: 0; */
   /* animation: var(--fade-animation); */
 }
@@ -304,11 +312,12 @@ section > * {
   margin-bottom: 0.8rem;
 }
 .rep .img-container {
-  /* float: right; */
-  /* clear: left; */
+  width: 30%;
+  padding-top: 52.5%;
+  padding-top: 45%;
   align-self: flex-start;
   min-width: 200px;
-  margin: 1.5rem 0 0.5% 5%;
+  margin: 1.5rem 0 0.5% 8%;
 }
 .rep .img-container::before {
   content: "";
@@ -347,6 +356,9 @@ section > * {
   overflow-y: hidden;
   /* width: calc(100% - 15px); */
 }
+.phone-modal {
+  overflow-y: hidden;
+}
 .modal {
   display: none;
   position: fixed;
@@ -371,14 +383,14 @@ section > * {
   max-width: 84%;
   max-height: 100%;
 }
-.modal-content i {
+.modal i {
   z-index: 12;
   font-size: 1.5rem;
   color: #FFF;
   opacity: 0.9;
   cursor: pointer;
 }
-.modal-content i:hover {
+.modal i:hover {
   opacity: 1;
 }
 .close {
@@ -503,15 +515,17 @@ footer {
     font-size: 1.1rem;
   }
 }
-@media (max-aspect-ratio: 8/7) {
+/* @media (max-aspect-ratio: 8/7) { */
+@media (max-aspect-ratio: 10/7) {
   .slideshow {
     height: 0;
-    padding-top: 65%;
+    padding-top: 48.5%;
   }
 }
 @media screen and (max-width: 1024px) {
   .slideshow {
     width: 100%;
+    padding-top: 65%;
   }
   .slides {
     top: -10px;
@@ -619,16 +633,19 @@ footer {
     max-width: 100%;
     padding: 0;
   }
-  .prev-slide {
+  .modal .prev-slide {
     position: absolute;
     left: 0;
+    opacity: 0.1;
   }
-  .next-slide {
+  .modal .next-slide {
     position: absolute;
     right: 0;
+    opacity: 0.1;
   }
-  .prev-slide:hover, .next-slide:hover {
+  .modal .prev-slide:hover, .modal .next-slide:hover {
     background: none;
+    opacity: 0.1;
   }
   .vid-container {
     width: 100%;
