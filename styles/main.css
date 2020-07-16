@@ -65,14 +65,17 @@ header .fa-bars, header .fa-times {
   /* top: -1rem; */
   left: 7.5%;
   width: 19rem;
-  height: 13rem;
+  /* height: 13rem; */
+  height: 11.5rem;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("../images/logo.gif");
+  /* background-image: url("../images/logo.gif"); */
+  background-image: url("../images/logo-new.png");
 }
 .logo a {
   position: absolute;
-  bottom: 74.5%;
+  /* bottom: 74.5%; */
+  bottom: 69%;
   right: 0;
   font-size: 2.6rem;
   font-family: 'Dancing Script', cursive;
@@ -80,7 +83,10 @@ header .fa-bars, header .fa-times {
 nav {
   position: absolute;
   top: 54%;
-  width: 100%;
+  /* left: 15rem; */
+  left: calc(7.5% + 8.5rem);
+  /* width: 100%; */
+  width: 65%;
 }
 nav ul {
   display: flex;
@@ -88,9 +94,9 @@ nav ul {
   align-items: center;
   justify-content: center;
   list-style: none;
-  width: 68%;
+  /* width: 68%; */
   height: 100%;
-  margin: auto;
+  /* margin: auto; */
 }
 nav li {
   margin: 0 1.5%;
@@ -506,7 +512,7 @@ footer {
   border-bottom: 1px solid var(--border-color);
 }
 .social a {
-  font-size: 2rem;
+  font-size: 2.3rem;
   padding: 0 3% 1.3rem;
 }
 
@@ -541,20 +547,27 @@ footer {
     transition: 0.5s ease;
   }
   .logo {
-    top: -0.4rem;
-    left: 0;
-    width: 14.3rem;
-    height: 6rem;
+    /* top: -0.4rem; */
+    top: -0.1rem;
+    /* left: 0; */
+    left: -0.1rem;
+    /* width: 14.3rem; */
+    width: 13.7rem;
+    /* height: 6rem; */
+    height: 7rem;
     margin: 0;
-    background-image: url("../images/logo.gif");
+    /* background-image: url("../images/logo-new2.png"); */
   }
   .logo a {
-    bottom: 45%;
+    /* bottom: 45%; */
+    bottom: 62%;
     font-size: 1.8rem;
   }
   nav {
     top: 4.5rem;
     bottom: 2.5rem;
+    left: 0;
+    width: 100%;
   }
   nav ul {
     display: none;
@@ -633,6 +646,12 @@ footer {
     max-width: 100%;
     padding: 0;
   }
+  .modal .close {
+    opacity: 0.7;
+  }
+  /* .close:hover {
+    opacity: 0.7;
+  } */
   .modal .prev-slide {
     position: absolute;
     left: 0;
