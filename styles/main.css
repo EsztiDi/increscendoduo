@@ -82,7 +82,8 @@ header .fa-bars, header .fa-times {
 }
 nav {
   position: absolute;
-  top: 54%;
+  /* top: 54%; */
+  top: 61%;
   /* left: 15rem; */
   left: calc(7.5% + 8.5rem);
   /* width: 100%; */
@@ -99,7 +100,8 @@ nav ul {
   /* margin: auto; */
 }
 nav li {
-  margin: 0 1.5%;
+  /* margin: 0 1.5%; */
+  margin: 0 2%;
   transition: transform 0.2s ease-in;
   transition: transform var(--transition-time);
 }
@@ -528,7 +530,10 @@ footer {
     padding-top: 48.5%;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1097px) {
+  nav {
+    top: 54%;
+  }
   .slideshow {
     width: 100%;
     padding-top: 65%;

@@ -56,19 +56,17 @@ $(document).ready(function() {
     }
   }
   
-  var slides = $(".modal-slides");
-  slides.each(function() {
-    var swipe = new Hammer(this);
-    swipe.get("swipe").set({ direction: Hammer.DIRECTION_ALL });
-    swipe.on("swipeleft", function(ev) {
-      plusSlides(1);
-    });
-    swipe.on("swiperight", function (ev) {
-      plusSlides(-1);
-    });
-    swipe.on("swipeup swipedown", function (ev) {
-      hideModal();
-    });
+  var modal = document.querySelector(".modal-content"),
+  swipe = new Hammer(modal);
+  swipe.get("swipe").set({ direction: Hammer.DIRECTION_ALL });
+  swipe.on("swiperight", function (ev) {
+    plusSlides(-1);
+  });
+  swipe.on("swipeleft", function (ev) {
+    plusSlides(1);
+  });
+  swipe.on("swipeup swipedown", function (ev) {
+    hideModal();
   });
 
   $(".close").on("click", function() {
