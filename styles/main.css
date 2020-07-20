@@ -63,7 +63,7 @@ header .fa-bars, header .fa-times {
 .logo {
   position: relative;
   /* top: -1rem; */
-  left: 7.5%;
+  left: 8%;
   width: 19rem;
   /* height: 13rem; */
   height: 11.5rem;
@@ -581,10 +581,6 @@ footer {
     justify-content: space-around;
     opacity: 0;
     animation: fade-in 0.5s 0.1s forwards alternate;
-  }
-  .index {
-    color: #8A9093;
-    color: var(--hover-color);
   }
   .show1 {
     height: 85%;

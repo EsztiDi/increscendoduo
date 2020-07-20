@@ -1,33 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="In Crescendo Duo"/>
-  <meta name="theme-color" content="#FFF"/>
-  <title>Biographies - In Crescendo Duo</title>
-  <link rel="shortcut icon" href="./images/favicon.ico"/>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./styles/fa-all.css"/>
-  <link rel="stylesheet" href="./styles/main.css">
-</head>
+<?php
+$title = "Bio - ";
+include './partials/head.php';
+?>
 <body>
   <header>
-    <div class="logo">
-      <a href="./index.html">In Crescendo Duo</a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a class="active" href="./biographies.html">Bio</a></li>
-        <li><a href="./repertoire.html">Repertoire</a></li>
-        <li><a href="./photos.html">Photos</a></li>
-        <li><a href="./music.html">Music</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <i class="fas fa-bars"></i>
-    <i class="fas fa-times"></i>
+    <?php include './partials/nav.php'; ?>
   </header>
   <main>
     <h2>Biographies</h2>
@@ -120,16 +99,6 @@
         </p>
     </section>
   </main>
-  <footer>
-    <div class="social">
-      <a title="Instagram" href="https://www.instagram.com/increscendoduo/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-      <a title="YouTube" href="https://www.youtube.com/channel/UCKPuak5VinYWDXk68tVhXFQ" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
-      <a title="Facebook" href="https://www.facebook.com/In-Crescendo-Duo-105776074485190" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-    </div>
-    <p>Copyright &copy; 2020, In Crescendo Duo <br> All rights reserved.</p>
-  </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
-  <script src="./scripts/main.js"></script>
+  <?php include './partials/footer.php'; ?>
 </body>
 </html>
