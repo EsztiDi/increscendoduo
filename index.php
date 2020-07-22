@@ -28,7 +28,7 @@
       <div class="next">
         <h3>Next performances</h3>
         <ul>
-          <li>01/08/2020 - Lorem ipsum dolor sit amet.</li>
+          <li>TBC</li>
         </ul>
       </div>
     </section>

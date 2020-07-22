@@ -17,18 +17,6 @@ include './partials/head.php';
         </div>
         <p>In Crescendo Duo - History of Tango, A. Piazzolla (I. Bordel 1900)</p>
       </div>
-      <div class="vid-container">
-        <div class="videos">
-          <iframe src="https://www.youtube-nocookie.com/embed/SIP_yj7AQK4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <p>In Crescendo Duo - History of Tango, A. Piazzolla (I. Bordel 1900)</p>
-      </div>
-      <div class="vid-container">
-        <div class="videos">
-          <iframe src="https://www.youtube-nocookie.com/embed/SIP_yj7AQK4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <p>In Crescendo Duo - History of Tango, A. Piazzolla (I. Bordel 1900)</p>
-      </div>
     </section>
   </main>
   <?php include './partials/footer.php'; ?>

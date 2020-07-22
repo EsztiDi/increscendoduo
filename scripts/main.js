@@ -43,8 +43,8 @@ $(document).ready(function() {
     $("header .fa-bars, header .fa-times").toggle(500);
   });
 
-  $(".cards > *, .bio p, .photos .card").each(function (index) {
-    $(this).css("animation-delay", index * 0.15 + "s");
+  $(".cards > *:not(h4), .bio p, .photos .card").each(function (index) {
+    $(this).css({"animation": "up 0.6s forwards", "animation-delay": index * 0.15 + "s"});
   });
   $(".daniel h3, .daniel .img-container").each(function () {
     $(this).css("animation-delay", $(".flora p").length * 0.15 + "s");

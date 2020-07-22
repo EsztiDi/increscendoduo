@@ -216,7 +216,7 @@ section > * {
   min-width: 320px;
   padding: 2rem 3% 0;
   opacity: 0;
-  animation: var(--up-animation);
+  /* animation: var(--up-animation); */
 }
 .us p, .contact p {
   text-align: justify;
@@ -250,7 +250,7 @@ section > * {
 .bio p {
   text-align: justify;
   opacity: 0;
-  animation: var(--up-animation);
+  /* animation: var(--up-animation); */
 }
 .img-container {
   position: relative;
@@ -350,7 +350,7 @@ section > * {
   overflow: hidden;
   cursor: pointer;
   opacity: 0;
-  animation: var(--up-animation);
+  /* animation: var(--up-animation); */
 }
 .card img {
   width: 100%;
