@@ -8,4 +8,3 @@ echo '<footer>
     <p>Copyright &copy; '.date("Y").', In Crescendo Duo<br>All rights reserved.</p>
   </footer>
   <script src="./scripts/main.js"></script>';
-?>

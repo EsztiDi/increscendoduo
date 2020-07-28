@@ -62,16 +62,17 @@ header .fa-times {
 }
 .logo {
   position: relative;
-  left: 8%;
-  width: 20.5rem;
-  height: 12.6rem;
+  top: -1.4rem;
+  left: 10%;
+  width: 21rem;
+  height: 17rem;
   background-repeat: no-repeat;
   background-size: contain;
   background-image: url("../images/logo.png");
 }
 .logo a {
   position: absolute;
-  bottom: 71%;
+  bottom: 71.5%;
   right: 0;
   font-size: 2.8rem;
   font-family: "Dancing Script", cursive;
@@ -79,14 +80,14 @@ header .fa-times {
 nav {
   position: absolute;
   top: 61%;
-  left: calc(8% + 70px);
-  width: 75%;
+  left: calc(10% + 100px);
+  width: calc(79% - 100px);
 }
 nav ul {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   list-style: none;
   height: 100%;
 }
@@ -368,7 +369,7 @@ section > * {
 }
 .modal-slides {
   display: none;
-  padding: 1%;
+  padding: 0.5rem;
   max-width: 84%;
   max-height: 100%;
 }
@@ -386,7 +387,7 @@ section > * {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 1%;
+  padding: 0.5rem 1rem;
 }
 .prev-slide,
 .next-slide {
@@ -518,9 +519,9 @@ footer {
     top: -10px;
   }
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1030px) {
   nav {
-    top: 54%;
+    top: 53%;
   }
 }
 @media screen and (max-width: 640px) {
@@ -533,14 +534,14 @@ footer {
     transition: 0.5s ease;
   }
   .logo {
-    top: -0.9rem;
-    left: 0;
-    width: 14.6rem;
-    height: 6.5rem;
+    top: -1.2rem;
+    left: -0.06rem;
+    width: 14.5rem;
+    height: 7.5rem;
     margin: 0;
   }
   .logo a {
-    bottom: 42%;
+    bottom: 44%;
     font-size: 1.8rem;
   }
   nav {
@@ -553,7 +554,7 @@ footer {
     display: none;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     opacity: 0;
     animation: fade-in 0.5s 0.1s forwards alternate;
   }

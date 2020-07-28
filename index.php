@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include './partials/head.php'; ?>
+
 <body>
   <header>
     <?php include './partials/nav.php'; ?>
@@ -28,11 +29,12 @@
       <div class="next">
         <h3>Next performances</h3>
         <ul>
-          <li>TBC</li>
+          <li>Coming soon</li>
         </ul>
       </div>
     </section>
   </main>
   <?php include './partials/footer.php'; ?>
 </body>
+
 </html>

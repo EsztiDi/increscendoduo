@@ -5,4 +5,5 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
 
 RewriteCond %{THE_REQUEST} ^.*(/index\.php|/index) [NC]
+RewriteRule ^/home? [R=302,L]
 RewriteRule ^home/?$ /index [L,NC,QSA]
