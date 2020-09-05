@@ -4,13 +4,14 @@
 $title = "Repertoire - ";
 include './partials/head.php';
 ?>
+
 <body>
   <header>
     <?php include './partials/nav.php'; ?>
   </header>
   <main>
     <h2>Repertoire</h2>
-    <section class="rep">
+    <section class="rep cushycms" id="Repertoire">
       <div>
         <h3>S. XIX</h3>
         <ul>
@@ -31,4 +32,5 @@ include './partials/head.php';
   </main>
   <?php include './partials/footer.php'; ?>
 </body>
+
 </html>

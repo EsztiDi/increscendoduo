@@ -4,6 +4,7 @@
 $title = "Bio - ";
 include './partials/head.php';
 ?>
+
 <body>
   <header>
     <?php include './partials/nav.php'; ?>
@@ -11,7 +12,7 @@ include './partials/head.php';
   <main>
     <h2>Biographies</h2>
     <section class="bio">
-      <div class="flora">
+      <div class="flora cushycms" id="Flóra bio">
         <div class="img-container">
           <img src="./images/9.jpg" alt="Flora Acosta 4">
         </div>
@@ -54,8 +55,8 @@ include './partials/head.php';
           (Spain) and John Kruse (Denmark).
         </p>
       </div>
-      <div class="daniel">
-        <div class="img-container">
+      <div class="daniel cushycms" id="Daniel bio">
+        <div class=" img-container">
           <img src="./images/10.jpg" alt="Daniel Acosta 4">
         </div>
         <h3>Daniel Acosta</h3>
@@ -101,4 +102,5 @@ include './partials/head.php';
   </main>
   <?php include './partials/footer.php'; ?>
 </body>
+
 </html>

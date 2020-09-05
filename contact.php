@@ -4,6 +4,7 @@
 $title = "Contact - ";
 include './partials/head.php';
 ?>
+
 <body>
   <header>
     <?php include './partials/nav.php'; ?>
@@ -18,7 +19,7 @@ include './partials/head.php';
       </div>
       <div class="phone">
         <h3>Telephone</h3>
-        <p>+45 5267 3527</p>
+        <a href="tel:+4552673527">+45 5267 3527 <i class="fas fa-external-link-alt"></i></a>
       </div>
       <div class="instagram">
         <h3>Instagram</h3>
@@ -32,4 +33,5 @@ include './partials/head.php';
   </main>
   <?php include './partials/footer.php'; ?>
 </body>
+
 </html>

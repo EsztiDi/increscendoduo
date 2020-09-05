@@ -1,14 +1,18 @@
 $(document).ready(function () {
-  // Audio settings and removing audio on smaller devices
+  // Audio settings and removing audio on small devices
   var audio = document.getElementById("audio");
   if (window.matchMedia("(max-width: 640px)").matches && audio) {
     audio.remove();
   } else if (audio) {
     audio.pause();
     audio.volume = 0.15;
-    audio.play();
-    $(window).one("click", function () {
+    setTimeout(() => {
       audio.play();
+    }, 1000);
+    $(window).one("click", function () {
+      setTimeout(() => {
+        audio.play();
+      }, 1000);
     });
   }
 
@@ -39,7 +43,7 @@ $(document).ready(function () {
     setTimeout(slideShow, 7000);
   }
 
-  // Mobile menu icon settings
+  // Icons for mobile menu
   $("header .fa-bars, header .fa-times").on("click", function () {
     $("body > header").toggleClass("show1");
     setTimeout(function () {

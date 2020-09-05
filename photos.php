@@ -4,6 +4,7 @@
 $title = "Photos - ";
 include './partials/head.php';
 ?>
+
 <body>
   <header>
     <?php include './partials/nav.php'; ?>
@@ -20,7 +21,7 @@ include './partials/head.php';
       <div class="card tall">
         <img src="./images/9.jpg" alt="Flora Acosta 4">
       </div>
-      <div class="card">        
+      <div class="card">
         <img src="./images/5.jpg" alt="Daniel Acosta 3">
       </div>
       <div class="card tall">
@@ -68,4 +69,5 @@ include './partials/head.php';
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" crossorigin="anonymous"></script>
   <script src="./scripts/photos.js"></script>
 </body>
+
 </html>

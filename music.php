@@ -4,13 +4,14 @@
 $title = "Music - ";
 include './partials/head.php';
 ?>
+
 <body>
   <header>
     <?php include './partials/nav.php'; ?>
   </header>
   <main>
     <h2>Music</h2>
-    <section class="music">
+    <section class="music cushycms" id="Music">
       <div class="vid-container">
         <div class="videos">
           <iframe src="https://www.youtube-nocookie.com/embed/SIP_yj7AQK4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -21,4 +22,5 @@ include './partials/head.php';
   </main>
   <?php include './partials/footer.php'; ?>
 </body>
+
 </html>

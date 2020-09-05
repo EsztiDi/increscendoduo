@@ -2,7 +2,7 @@
 echo '<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="In Crescendo Duo - an instrumental duo of clarinet and guitar"/>
+  <meta name="description" content="An instrumental duo of clarinet and guitar by Flora and Daniel Acosta."/>
   <meta name="theme-color" content="#FFF"/>
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="msapplication-config" content="./browserconfig.xml">
