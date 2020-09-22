@@ -53,7 +53,7 @@ $(document).ready(function () {
   });
 
   // Staggerred animation for some elements on home, bio and photos page
-  $(".cards > *:not(h4), .bio p, .photos .card").each(function (index) {
+  $(".cards > *:not(h4), .bio p, .photos img").each(function (index) {
     $(this).css({
       animation: "up 0.6s forwards",
       "animation-delay": index * 0.15 + "s",

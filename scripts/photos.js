@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Modal slideshow for photos
-  $(".card").each(function (index) {
+  $(".photos img").each(function (index) {
     $(this).on("click", function () {
       currentSlide(index + 1);
       // Different css for body depending on device
@@ -81,7 +81,7 @@ $(document).ready(function () {
   }
 
   function modalSlides(n) {
-    var slides = $(".modal-slides");
+    var slides = $(".popup img");
     if (n > slides.length) {
       modalSlideIndex = 1;
     }
