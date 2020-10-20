@@ -12,7 +12,7 @@ include './partials/head.php';
   <main>
     <h2>Biographies</h2>
     <section class="bio">
-      <div class="flora cushycms" id="Flóra bio">
+      <div class="flora cushycms" id="flóra-bio">
         <div class="img-container">
           <img src="./images/9.jpg" alt="Flora Acosta 4">
         </div>
@@ -55,7 +55,7 @@ include './partials/head.php';
           (Spain) and John Kruse (Denmark).
         </p>
       </div>
-      <div class="daniel cushycms" id="Daniel bio">
+      <div class="daniel cushycms" id="daniel-bio">
         <div class=" img-container">
           <img src="./images/10.jpg" alt="Daniel Acosta 4">
         </div>

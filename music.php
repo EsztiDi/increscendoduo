@@ -11,7 +11,7 @@ include './partials/head.php';
   </header>
   <main>
     <h2>Music</h2>
-    <section class="music cushycms" id="Music">
+    <section class="music cushycms" id="music">
       <div class="vid-container">
         <div class="videos">
           <iframe src="https://www.youtube-nocookie.com/embed/SIP_yj7AQK4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

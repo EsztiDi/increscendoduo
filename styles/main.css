@@ -32,7 +32,8 @@
   background: var(--hover-color);
 }
 a,
-i {
+i,
+.event-link * {
   text-decoration: none;
   -webkit-transition: 0.2s ease-in;
   -o-transition: 0.2s ease-in;
@@ -258,8 +259,22 @@ section {
 }
 .us p:not(:last-of-type),
 .contact p:not(:last-of-type),
-.next li:not(:last-of-type) {
+.upcoming li:not(:last-of-type),
+.event-link:not(:last-of-type) {
   margin-bottom: 1rem;
+}
+.past {
+  margin-top: 2rem;
+}
+.event-link {
+  display: flex;
+  flex-direction: column;
+}
+.event-link img {
+  max-width: 95%;
+  max-height: 150px;
+  margin-top: 2.5%;
+  align-self: center;
 }
 .cards h3 {
   font-family: "Varela Round", sans-serif;
@@ -565,7 +580,8 @@ section {
 .contacts a {
   white-space: nowrap;
 }
-.contacts a:hover {
+.contacts a:hover,
+.event-link:hover * {
   color: #8a9093;
   color: var(--hover-color);
 }

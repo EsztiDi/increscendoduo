@@ -12,7 +12,7 @@ include './partials/head.php';
   <main>
     <h2>Contact</h2>
     <section class="cards contacts">
-      <h4>We welcome all enquiries!<br>Please contact us via one of the options below and we will get back to you as quickly as possible.</h4>
+      <h4 class="cushycms" id="contact-intro">We welcome all enquiries!<br>Please contact us via one of the options below and we will get back to you as quickly as possible.</h4>
       <div class="email">
         <h3>E-mail</h3>
         <a href="mailto:increscendoduo@gmail.com?Subject=Enquiry" target="_blank" rel="noopener noreferrer">increscendoduo@gmail.com <i class="fas fa-external-link-alt"></i></a>

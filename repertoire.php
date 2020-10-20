@@ -11,7 +11,7 @@ include './partials/head.php';
   </header>
   <main>
     <h2>Repertoire</h2>
-    <section class="rep cushycms" id="Repertoire">
+    <section class="rep cushycms" id="repertoire">
       <div>
         <h3>S. XIX</h3>
         <ul>

@@ -9,11 +9,6 @@ $(document).ready(function () {
     setTimeout(() => {
       audio.play();
     }, 1000);
-    $(window).one("click", function () {
-      setTimeout(() => {
-        audio.play();
-      }, 1000);
-    });
   }
 
   // Highlighting current page in the menu

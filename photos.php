@@ -11,7 +11,7 @@ include './partials/head.php';
   </header>
   <main>
     <h2>Photos</h2>
-    <section class="photos cushycms" id="Photos">
+    <section class="photos cushycms" id="photos">
       <img class="tall" src="./images/2.jpg" alt="In Crescendo Duo 2" onerror="this.style.display='none'">
       <img src="./images/3.jpg" alt="Daniel Acosta 1" onerror="this.style.display='none'">
       <img class="tall" src="./images/9.jpg" alt="Flora Acosta 4" onerror="this.style.display='none'">
@@ -28,7 +28,7 @@ include './partials/head.php';
       <div class="modal-content">
         <i class="fas fa-times close"></i>
         <i class="fas fa-angle-left prev-slide"></i>
-        <div class="popup cushycms" id="Pop-up">
+        <div class="popup cushycms" id="pop-up">
           <img src="./images/2.jpg" alt="In Crescendo Duo 2">
           <img src="./images/3.jpg" alt="Daniel Acosta 1">
           <img src="./images/9.jpg" alt="Flora Acosta 4">
