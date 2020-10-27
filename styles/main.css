@@ -267,13 +267,20 @@ section {
   margin-top: 2rem;
 }
 .event-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 .event-link img {
   max-width: 95%;
   max-height: 150px;
   margin-top: 2.5%;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
 }
 .cards h3 {
@@ -652,9 +659,9 @@ footer {
     left: 0;
     width: 100%;
     height: 3.5rem;
-    -webkit-transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-    transition: 0.5s ease;
+    -webkit-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+    transition: 0.4s ease;
   }
   .logo {
     top: -1.2rem;
@@ -682,8 +689,10 @@ footer {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     opacity: 0;
-    -webkit-animation: fade-in 0.5s 0.1s forwards alternate;
-    animation: fade-in 0.5s 0.1s forwards alternate;
+    -webkit-animation: fade-in 0.4s forwards;
+    animation: fade-in 0.4s forwards;
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
   }
   .show1 {
     height: 85%;

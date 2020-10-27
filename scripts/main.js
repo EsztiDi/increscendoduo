@@ -41,10 +41,8 @@ $(document).ready(function () {
   // Icons for mobile menu
   $("header .fa-bars, header .fa-times").on("click", function () {
     $("body > header").toggleClass("show1");
-    setTimeout(function () {
-      $("nav ul").toggleClass("show2");
-    }, 100);
-    $("header .fa-bars, header .fa-times").toggle(500);
+    $("nav ul").toggleClass("show2");
+    $("header .fa-bars, header .fa-times").toggle(250);
   });
 
   // Staggerred animation for some elements on home, bio and photos page
