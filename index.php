@@ -5,7 +5,7 @@
 <body>
   <header>
     <?php include './partials/nav.php'; ?>
-    <audio id="audio" src="./audio/In Crescendo Duo - History of Tango.mp3" controlsList="nodownload" controls autoplay loop></audio>
+    <audio id="audio" src="./audio/history_of_tango.mp3" controlsList="nodownload" controls autoplay loop></audio>
   </header>
   <main class="home">
     <div class="slideshow">
@@ -33,12 +33,12 @@
         </ul>
         <h3 class="past">Past events</h3>
         <ul class="cushycms" id="past-events">
-          <a class="event-link" href="https://allevents.in/greve/h%C3%A6ngek%C3%B8jekoncert-in-crescendo-duo/200018939852335?ref=past-event-page" target="_blank" rel="noopener noreferrer">
-            <li>
-              <strong>Apr 25, 2020</strong> - Hængekøje&shykoncert: In Crescendo Duo<br> - <em>Køge Museum, Køge, Denmark</em>
-            </li>
-            <img src="https://cdn7.allevents.in/banners/f24ac600-52e0-11ea-8495-6b2c0adf112f-rimg-w526-h296-gmir.jpg?v=1582093668" alt="Event image" onerror="this.style.display='none'">
-          </a>
+          <li>
+            <a class="event-link" href="https://allevents.in/greve/h%C3%A6ngek%C3%B8jekoncert-in-crescendo-duo/200018939852335?ref=past-event-page" target="_blank" rel="noopener noreferrer">
+              <span><strong>Apr 25, 2020</strong>&nbsp;- Hængekøje&shy;koncert: In Crescendo Duo<br> -&nbsp;<em>Køge Museum, Køge, Denmark</em></span>
+              <img src="https://cdn7.allevents.in/banners/f24ac600-52e0-11ea-8495-6b2c0adf112f-rimg-w526-h296-gmir.jpg?v=1582093668" alt="Event image" onerror="this.style.display='none'">
+            </a>
+          </li>
         </ul>
       </div>
     </section>
