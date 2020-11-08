@@ -17,20 +17,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-::-webkit-scrollbar,
-::-webkit-scrollbar-track,
-::-webkit-scrollbar-corner {
-  background: #eaebec;
-}
-::-webkit-scrollbar-thumb {
-  background: #bec1c4;
-  background: var(--border-color);
-  border-radius: 25px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #8a9093;
-  background: var(--hover-color);
-}
 a,
 i,
 .event-link * {
@@ -224,6 +210,7 @@ section {
   overflow: hidden;
   width: 79%;
   height: 76vh;
+  height: calc(100vh - 7.5rem - 3.5rem);
   margin: auto;
   background: -o-linear-gradient(225deg, #bec1c4, #fff);
   background: linear-gradient(225deg, #bec1c4, #fff);
@@ -238,7 +225,7 @@ section {
 .slides {
   display: none;
   position: absolute;
-  top: -40px;
+  top: -3%;
   width: 100%;
 }
 
@@ -329,6 +316,7 @@ section {
   left: -4.5%;
   width: 95%;
   height: 96.67%;
+  background: -o-linear-gradient(135deg, rgba(0, 35, 102, 0.6), transparent);
   background: -o-linear-gradient(315deg, rgba(0, 35, 102, 0.6), transparent);
   background: linear-gradient(135deg, rgba(0, 35, 102, 0.6), transparent);
 }
@@ -401,8 +389,8 @@ section {
   width: 95%;
   height: 96.67%;
   min-height: 290px;
-  background: -o-linear-gradient(195deg, rgba(0, 35, 102, 0.6), transparent);
-  background: linear-gradient(255deg, rgba(0, 35, 102, 0.6), transparent);
+  background: -o-linear-gradient(225deg, rgba(0, 35, 102, 0.6), transparent);
+  background: linear-gradient(225deg, rgba(0, 35, 102, 0.6), transparent);
 }
 
 .photos {
@@ -558,6 +546,7 @@ section {
   text-align: center;
 }
 .contacts h3 {
+  text-indent: 0;
   padding-bottom: 0.3rem;
   border-bottom: 1px solid #bec1c4;
   border-bottom: 1px solid var(--border-color);
@@ -577,16 +566,19 @@ section {
   -webkit-animation: var(--fade-animation);
   animation: var(--fade-animation);
 }
-.contacts i {
+.contacts i,
+.contact i {
   font-size: 0.9rem;
   margin-left: 2%;
   color: #8a9093;
   color: var(--hover-color);
 }
-.contacts a {
+.contacts a,
+.contact a {
   white-space: nowrap;
 }
 .contacts a:hover,
+.contact a:hover,
 .event-link:hover * {
   color: #8a9093;
   color: var(--hover-color);
@@ -626,32 +618,54 @@ footer {
   margin: 0 3% 1.3rem;
 }
 
-@media screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
   section {
     font-size: 1.1rem;
   }
 }
-@media (max-aspect-ratio: 10/7) {
+@media only screen and (min-width: 1024px) and (max-aspect-ratio: 81/50),
+  (min-width: 1024px) and (min-aspect-ratio: 101/50),
+  (min-width: 1996px) and (max-aspect-ratio: 91/50) {
   .slideshow {
     height: 0;
-    padding-top: 48.5%;
+    padding-top: 51%;
   }
 }
-@media screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (max-aspect-ratio: 6/5),
+  (max-width: 1024px) and (min-aspect-ratio: 81/50),
+  (max-width: 640px) {
+  .slideshow {
+    height: 0;
+    padding-top: 66.64%;
+  }
+}
+@media only screen and (max-width: 1024px) {
   .slideshow {
     width: 100%;
-    padding-top: 65%;
   }
   .slides {
-    top: -10px;
+    top: 0;
   }
 }
-@media screen and (max-width: 1030px) {
+@media only screen and (max-width: 1045px) {
   nav {
     top: 53%;
   }
 }
-@media screen and (max-width: 640px) {
+@media only screen and (max-width: 778px) {
+  .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .cards h3,
+  .rep h3 {
+    text-align: center;
+    text-indent: 0;
+  }
+}
+@media only screen and (max-width: 640px) {
   body > header {
     position: fixed;
     top: 0;
@@ -719,28 +733,13 @@ footer {
     font-size: 1rem;
     margin: 1.5rem 5% 0;
   }
-  .slideshow {
-    padding-top: 66.64%;
-  }
-  .slides {
-    top: 0;
-  }
   .cards {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
     margin: 1.5rem 0 0;
     padding: 0 5%;
   }
   .cards > * {
     min-width: auto;
     padding: 2rem 0 0;
-  }
-  .cards h3,
-  .rep h3 {
-    text-align: center;
-    text-indent: 0;
   }
   .bio h3 {
     font-size: 2rem;

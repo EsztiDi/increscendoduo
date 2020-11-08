@@ -23,8 +23,8 @@
       <div class="contact cushycms" id="contact">
         <h3>Contact</h3>
         <p>For hire enquiries or for more information, feel free to contact us at any time:</p>
-        <p><strong>E-mail:</strong> increscendoduo@gmail.com</p>
-        <p><strong>Phone:</strong> +45 5267 3527</p>
+        <p><strong>E-mail:</strong> <a href="mailto:increscendoduo@gmail.com?Subject=Enquiry" target="_blank" rel="noopener noreferrer">increscendoduo@gmail.com <i class="fas fa-external-link-alt"></i></a></p>
+        <p><strong>Phone:</strong> <a href="tel:+4552673527">+45 5267 3527 <i class="fas fa-external-link-alt"></i></a></p>
       </div>
       <div class="upcoming">
         <h3>Upcoming concerts</h3>

@@ -14,7 +14,7 @@ include './partials/head.php';
     <section class="bio">
       <div class="flora cushycms" id="flóra-bio">
         <div class="img-container">
-          <img src="./images/9.jpg" alt="Flora Acosta 4">
+          <img src="./images/9.jpg" alt="Flora Acosta 4" onerror="this.style.display='none'">
         </div>
         <h3>Flóra Acosta</h3>
         <p>
@@ -57,7 +57,7 @@ include './partials/head.php';
       </div>
       <div class="daniel cushycms" id="daniel-bio">
         <div class=" img-container">
-          <img src="./images/10.jpg" alt="Daniel Acosta 4">
+          <img src="./images/10.jpg" alt="Daniel Acosta 4" onerror="this.style.display='none'">
         </div>
         <h3>Daniel Acosta</h3>
         <p>
