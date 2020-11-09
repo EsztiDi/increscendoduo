@@ -7,6 +7,7 @@
   --fade-animation: fade-in 0.7s forwards;
   --up-animation: up 0.6s forwards;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,20 @@
   background: transparent;
   color: #000;
   font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 a,
@@ -119,6 +134,8 @@ nav li {
   transition: transform var(--transition-time);
   transition: transform var(--transition-time),
     -webkit-transform var(--transition-time);
+  transition: transform var(--transition-time),
+    -webkit-transform var(--transition-time);
 }
 nav li:first-of-type {
   margin-left: 0;
@@ -174,6 +191,7 @@ audio:hover {
 
 main {
   margin-top: 2.5rem;
+  margin-bottom: 8rem;
 }
 .home {
   margin-top: 1rem;
@@ -200,8 +218,8 @@ section {
   line-height: 1.5;
   margin: 0 15%;
 }
-.bio > *,
-.music > * {
+.bio > *:not(:last-child),
+.music > *:not(:last-child) {
   padding-bottom: 2.5rem;
 }
 
@@ -261,7 +279,7 @@ section {
   margin-bottom: 1rem;
 }
 .past {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 .event-link img {
   display: block;
@@ -557,6 +575,9 @@ section {
   min-width: auto;
   padding: 0 4% 3.5rem;
 }
+.contacts > *:last-child {
+  padding-bottom: 0;
+}
 .contacts > h4 {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
@@ -588,7 +609,7 @@ footer {
   width: 100%;
   font-size: 0.9rem;
   text-align: center;
-  margin: 10rem 0 1.5rem;
+  margin: auto 0 1.5rem;
 }
 .social i.fa-instagram:hover {
   color: #d73e90;
@@ -623,16 +644,16 @@ footer {
     font-size: 1.1rem;
   }
 }
-@media only screen and (min-width: 1024px) and (max-aspect-ratio: 81/50),
-  (min-width: 1024px) and (min-aspect-ratio: 101/50),
+@media only screen and (min-width: 1024px) and (max-aspect-ratio: 41/25),
+  (min-width: 1024px) and (min-aspect-ratio: 51/25),
   (min-width: 1996px) and (max-aspect-ratio: 91/50) {
   .slideshow {
     height: 0;
     padding-top: 51%;
   }
 }
-@media only screen and (max-width: 1024px) and (max-aspect-ratio: 6/5),
-  (max-width: 1024px) and (min-aspect-ratio: 81/50),
+@media only screen and (max-width: 1024px) and (max-aspect-ratio: 121/100),
+  (max-width: 1024px) and (min-aspect-ratio: 41/25),
   (max-width: 640px) {
   .slideshow {
     height: 0;
@@ -739,7 +760,10 @@ footer {
   }
   .cards > * {
     min-width: auto;
-    padding: 2rem 0 0;
+    padding: 2.5rem 0 0;
+  }
+  .cards > *:first-child {
+    padding-top: 2rem;
   }
   .bio h3 {
     font-size: 2rem;
