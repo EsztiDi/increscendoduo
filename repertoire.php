@@ -26,7 +26,7 @@ include './partials/head.php';
         </ul>
       </div>
       <div class="img-container">
-        <img src="./images/2.jpg" alt="In Crescendo Duo 2">
+        <img src="/images/2.jpg" alt="In Crescendo Duo 2">
       </div>
     </section>
   </main>

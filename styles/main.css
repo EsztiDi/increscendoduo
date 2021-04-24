@@ -609,7 +609,8 @@ footer {
   width: 100%;
   font-size: 0.9rem;
   text-align: center;
-  margin: auto 0 1.5rem;
+  margin-top: auto;
+  padding-bottom: 1.5rem;
 }
 .social i.fa-instagram:hover {
   color: #d73e90;

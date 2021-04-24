@@ -5,12 +5,12 @@
 <body>
   <header>
     <?php include './partials/nav.php'; ?>
-    <audio id="audio" src="./audio/history_of_tango.mp3" controlsList="nodownload" controls autoplay loop></audio>
+    <audio id="audio" src="/audio/history_of_tango.mp3" controlsList="nodownload" controls autoplay loop></audio>
   </header>
   <main class="home">
     <div class="slideshow">
-      <img class="slides" src="./images/1.jpg" alt="In Crescendo Duo 1">
-      <img class="slides" src="./images/2.jpg" alt="In Crescendo Duo 2">
+      <img class="slides" src="/images/1.jpg" alt="In Crescendo Duo 1">
+      <img class="slides" src="/images/2.jpg" alt="In Crescendo Duo 2">
     </div>
     <section class="cards">
       <div class="us cushycms" id="about-us">
